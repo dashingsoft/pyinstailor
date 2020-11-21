@@ -10,22 +10,22 @@ Examples
 
 * List all the available items in the archive
 
-    pyinstailor dist/foo.exe
+        pyinstailor dist/foo.exe
 
 * Replace entry script "foo.py" in the bundle "foo.exe"
 
-    pyinstailor dist/foo.exe foo.py
+        pyinstailor dist/foo.exe foo.py
 
 * If entry scrip is in other path, strip the first N path
 
-    pyinstailor -s 1 dist/foo.exe src/foo.py
+        pyinstailor -s 1 dist/foo.exe src/foo.py
 
 * Replace package file "reader/__init__.py" in the bundle "foo.exe"
 
-    pyinstailor dist/foo.exe reader/__init__.py
+        pyinstailor dist/foo.exe reader/__init__.py
 
 * Strip the first path in the file path
 
-    pyinstailor -s 2 dist/foo.exe ../../reader/__init__.py
+        pyinstailor -s 2 dist/foo.exe ../../reader/__init__.py
 
 This tool doesn't support PyInstaller 2.0, and it's not full test.
