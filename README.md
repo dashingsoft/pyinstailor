@@ -29,3 +29,9 @@ Examples
         pyinstailor -s 2 dist/foo.exe ../../reader/__init__.py
 
 This tool doesn't support PyInstaller 2.0, and it's not full test.
+
+## Change Logs
+
+### 1.1
+
+* Fix bug: the final bundle isn't patched in some platforms
