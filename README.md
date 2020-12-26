@@ -20,7 +20,7 @@ Examples
 
         pyinstailor -s 1 dist/foo.exe src/foo.py
 
-* Replace package file "reader/__init__.py" in the bundle "foo.exe"
+* Replace package file ``reader/__init__.py`` in the bundle "foo.exe"
 
         pyinstailor dist/foo.exe reader/__init__.py
 
@@ -31,6 +31,11 @@ Examples
 This tool doesn't support PyInstaller 2.0, and it's not full test.
 
 ## Change Logs
+
+### 1.4
+
+* Fix bug: it fails when printing toc where the embedded PYZ archive
+  contains subdirectories
 
 ### 1.3
 
