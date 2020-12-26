@@ -32,6 +32,11 @@ This tool doesn't support PyInstaller 2.0, and it's not full test.
 
 ## Change Logs
 
+### 1.3
+
+* Fix python2.7 bug: it raises exception `TypeError: makedirs() got an
+  unexpected keyword argument 'exist_ok'`
+
 ### 1.2
 
 * Fix bug: when repacking an executable where the embedded PKG archive
