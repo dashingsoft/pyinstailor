@@ -237,8 +237,7 @@ def print_archive_items(executable):
 
     path = os.path.join(os.path.basename(executable) + '_extracted')
     logger.info('Extracted bundle files to "%s"', path)
-    if not os.path.exists(path):
-        os.makedirs(path)
+    makedirs(path, exist_ok=True)
 
     logger.info('Got items from PKG')
     arch = CArchiveReader(executable)
@@ -248,6 +247,7 @@ def print_archive_items(executable):
         dpos, dlen, ulen, flag, typcd, nm = toc
         if nm.endswith('.pyz') and typcd in ('z', 'Z'):
             pathnm = os.path.join(path, nm)
+            makedirs(os.path.dirname(pathnm), exist_ok=True)
             with arch.lib:
                 arch.lib.seek(arch.pkg_start + dpos)
                 with open(pathnm, 'wb') as f:
