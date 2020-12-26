@@ -32,6 +32,11 @@ This tool doesn't support PyInstaller 2.0, and it's not full test.
 
 ## Change Logs
 
+### 1.2
+
+* Fix bug: when repacking an executable where the embedded PKG archive
+  contains subdirectories, the repack script fails
+
 ### 1.1
 
 * Fix bug: the final bundle isn't patched in some platforms
